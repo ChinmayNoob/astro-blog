@@ -1,0 +1,22 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<header class="mb-6 flex items-center justify-between" transition:name="header">
+  <nav class="flex items-center gap-4">
+    <a href="/" class="text-2xl"> chinmay </a>
+    <a href="/posts"> posts </a>
+    <a href="/projects"> projects </a>
+    <a
+      href="https://drive.google.com/file/d/1IuhFo_5iZ9FHvnbhRA14gSQ5MyXY9ziO/view"
+      target="_blank">resume</a
+    >
+  </nav>
+  <ThemeToggle />
+</header>
+
+<style>
+  a {
+    @apply font-medium text-zinc-500 hover:text-zinc-900 hover:underline dark:hover:text-zinc-100;
+  }
+</style>

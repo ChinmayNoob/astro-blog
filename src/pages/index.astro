@@ -1,11 +1,55 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { EMAIL, SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title={SITE_TITLE}
+  description={SITE_DESCRIPTION}
+  className="flex h-svh max-w-sm flex-col justify-center"
+>
+  <main class="space-y-4">
+    <p>
+      Hey there! I'm Chinmay, a 20-year-old wannabe dev chasing dreams one line
+      of code at a time. Currently jamming to Ye while building something cool.
+    </p>
+    <p>
+      You can find me online raising a PR on
+      <a href="" class="text-blue-400 underline">Github</a> or practicing algorithms
+      on <a href="" class="text-blue-400 underline">Codeforces</a>.If you
+      don&apos;t see me there i might just be binge watching an anime.
+    </p>
+    <p>
+      <span class="text-blue-400">Socials: </span><a
+        href="https://x.com/Chinmay0408"
+        target="_blank"
+        class="underline">X</a
+      >{" "}<a
+        href="https://www.linkedin.com/in/chinmay-sawant0408/"
+        target="_blank"
+        class="underline">Linkedin</a
+      >{" "}<a href={`mailto:${EMAIL}`} class="underline">Email</a>
+    </p>
+    <p>
+      <a
+        href="#"
+        class="flex items-center space-x-2 text-blue-400 underline hover:text-blue-500"
+      >
+        My Portfolio
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M5 19L19 5M19 5v8M19 5h-8"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </p>
+  </main>
 </Layout>
