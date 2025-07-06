@@ -6,50 +6,75 @@ import Layout from "../layouts/Layout.astro";
 <Layout
   title={SITE_TITLE}
   description={SITE_DESCRIPTION}
-  className="flex h-svh max-w-sm flex-col justify-center"
+  className="mx-auto flex min-h-svh max-w-2xl flex-col justify-center px-6 py-12"
 >
-  <main class="space-y-4">
-    <p>
-      Hey there! I'm Chinmay, a 20-year-old wannabe dev chasing dreams one line
-      of code at a time. Currently jamming to Ye while building something cool.
-    </p>
-    <p>
-      You can find me online raising a PR on
-      <a href="" class="text-blue-400 underline">Github</a> or practicing algorithms
-      on <a href="" class="text-blue-400 underline">Codeforces</a>.If you
-      don&apos;t see me there i might just be binge watching an anime.
-    </p>
-    <p>
-      <span class="text-blue-400">Socials: </span><a
-        href="https://x.com/Chinmay0408"
-        target="_blank"
-        class="underline">X</a
-      >{" "}<a
-        href="https://www.linkedin.com/in/chinmay-sawant0408/"
-        target="_blank"
-        class="underline">Linkedin</a
-      >{" "}<a href={`mailto:${EMAIL}`} class="underline">Email</a>
-    </p>
-    <p>
+  <main class="space-y-6">
+    <div class="prose prose-neutral dark:prose-invert">
+      <p class="text-lg font-light leading-relaxed">
+        Hey there! I'm <span class="font-medium">Chinmay</span>, a 20-year-old
+        Full Stack Developer.
+      </p>
+      <p class="text-lg font-light leading-relaxed">
+        You can find me online raising a PR on
+        <a
+          href="https://github.com/ChinmayNoob"
+          class="font-medium text-neutral-800 no-underline transition-colors hover:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-400"
+          >Github</a
+        > and honing my problem-solving skills on
+        <a
+          href="https://codeforces.com/profile/Chinmay04AUG_"
+          class="font-medium text-neutral-800 no-underline transition-colors hover:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-400"
+          >Codeforces</a
+        >. Always eager to learn and explore new technologies.
+      </p>
+      <p class="text-lg font-light leading-relaxed">Views are my own</p>
+    </div>
+
+    <div class="flex flex-col space-y-4">
+      <div class="flex items-center space-x-1">
+        <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400"
+          >Connect:</span
+        >
+        <nav class="flex items-center space-x-4">
+          <a
+            href="https://x.com/Chinmay0408"
+            target="_blank"
+            class="text-sm font-medium text-neutral-800 transition-colors hover:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-400"
+            >X</a
+          >
+          <a
+            href="https://www.linkedin.com/in/chinmay-sawant0408/"
+            target="_blank"
+            class="text-sm font-medium text-neutral-800 transition-colors hover:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-400"
+            >LinkedIn</a
+          >
+          <a
+            href={`mailto:${EMAIL}`}
+            class="text-sm font-medium text-neutral-800 transition-colors hover:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-400"
+            >Email</a
+          >
+        </nav>
+      </div>
+
       <a
-        href="#"
-        class="flex items-center space-x-2 text-blue-400 underline hover:text-blue-500"
+        href="https://chinmaynoob.vercel.app/"
+        class="group inline-flex w-fit items-center space-x-2 text-sm font-medium text-neutral-800 transition-colors hover:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-400"
       >
-        My Portfolio
+        <span>View Portfolio</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4"
-          fill="currentColor"
+          class="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+          fill="none"
+          stroke="currentColor"
           viewBox="0 0 24 24"
         >
           <path
             d="M5 19L19 5M19 5v8M19 5h-8"
-            stroke="currentColor"
-            stroke-width="2"
+            stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"></path>
         </svg>
       </a>
-    </p>
+    </div>
   </main>
 </Layout>
